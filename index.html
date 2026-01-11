@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite Secreto 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+    url('fundo1.jpg');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  min-height:100vh;
+}
+
+.container{
+  display:flex;
+  justify-content:center;
+  padding:50px 0;
+}
+
+.card{
+  width:390px;
+  max-width:95%;
+  background:rgba(0,0,0,.55);
+  border-radius:30px;
+  padding:30px 24px;
+  text-align:center;
+  backdrop-filter:blur(8px);
+}
+
+.title{
+  font-family:'Great Vibes',cursive;
+  font-size:48px;
+  color:#f8bbd0;
+}
+
+.subtitle{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+.text{
+  font-size:14.5px;
+  line-height:1.9;
+  margin:18px 0;
+  opacity:0;
+  animation:fade 1.4s forwards;
+}
+
+.btn{
+  background:linear-gradient(90deg,#ff5f8f,#b0005f);
+  color:#fff;
+  padding:13px 22px;
+  border-radius:28px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  margin:10px 0;
+}
+
+.hidden{display:none}
+
+@keyframes fade{
+  to{opacity:1}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="love.mp3">
+</audio>
+
+<div class="container">
+<div class="card">
+
+<div class="title">Amorzinho 💕</div>
+<div class="subtitle">Lê com calma… isto é para ti</div>
+
+<div class="text">
+Olá, Armando 😌  
+<br><br>
+Se chegaste até aqui, é porque aceitaste parar um pouco  
+e dar atenção a algo que preparei com carinho, intenção  
+e uma pitada de mistério ✨  
+<br><br>
+Não é apenas um convite.  
+É uma experiência.  
+É uma pausa no mundo para nós dois.
+</div>
+
+<button class="btn" onclick="start()">Continuar 💫</button>
+
+<!-- BLOCO 1 -->
+<div id="b1" class="hidden">
+<div class="text">
+💭 Já pensaste como os momentos mais simples  
+podem tornar-se os mais marcantes?  
+<br><br>
+Um olhar mais demorado 👀  
+Uma conversa que flui 🍷  
+Um silêncio confortável 🤍  
+<br><br>
+É exatamente isso que quero viver contigo.
+</div>
+
+<button class="btn" onclick="quiz()">Quero saber mais 😏</button>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="hidden">
+<div class="text">
+😈 Agora responde com o coração… 💖💖 
+(não vale pensar muito)
+</div>
+
+<p>💖 Data do nosso Namoro?</p>
+<button class="btn" onclick="save('01/09/2012')">🔥 01/09/2012</button>
+<button class="btn" onclick="save('12/07/2023')">💞 12/07/2023</button>
+<button class="btn" onclick="save('22/07/2018')">🌙 22/07/2018</button>
+
+<p>💖 O que mais te atrai em mim?</p>
+<button class="btn" onclick="save('Olhar')">🔥 Olhar</button>
+<button class="btn" onclick="save('Bunda')">💞 Bunda</button>
+<button class="btn" onclick="save('labios')">🌙 labios</button>
+
+<p>💖 O que mais te prende num momento a dois?</p>
+<button class="btn" onclick="save('intenso')">🔥 Intensidade</button>
+<button class="btn" onclick="save('romance')">💞 Romance</button>
+<button class="btn" onclick="save('mistério')">🌙 Mistério</button>
+
+<p>🍽️ Num jantar perfeito, preferes:</p>
+<button class="btn" onclick="save('vinho')">🍷 Vinho e conversa</button>
+<button class="btn" onclick="save('risos')">😄 Rir sem pressa</button>
+<button class="btn" onclick="save('surpresa')">🎁 Surpresas inesperadas</button>
+
+<p>💫 Quando a noite é perfeita?</p>
+<button class="btn" onclick="save('começo')">🌙 Quando começa</button>
+<button class="btn" onclick="save('meio')">✨ Quando o tempo para</button>
+<button class="btn" onclick="save('fim')">💋 Quando não queremos ir embora</button>
+
+<button class="btn" onclick="final()">Descobrir o que preparei 💌</button>
+</div>
+
+<!-- FINAL -->
+<div id="final" class="hidden">
+<div class="text" id="finalText"></div>
+
+<div class="text">
+📅 <strong>Quando:</strong> Em breve…  
+<br>
+📍 <strong>Onde:</strong> Um lugar pensado para nós  
+<br>
+👗 <strong>Dress code:</strong> Veste-te como te sentes quando estás comigo 😏  
+<br><br>
+Nada exagerado.  
+Nada forçado.  
+Só presença, conexão e intenção.
+</div>
+
+<a class="btn" href="https://wa.me/258849299853?text=Aceito%20o%20convite%20e%20estou%20curioso%20😏💖" target="_blank">
+Aceito viver isto contigo 💋
+</a>
+</div>
+
+<div class="text" style="font-size:12px;opacity:.85">
+Criado com carinho, mistério e vontade  
+<br>— Nélia 💕
+</div>
+
+</div>
+</div>
+
+<script>
+let escolhas=[];
+
+function start(){
+  document.getElementById('music').play().catch(()=>{});
+  document.getElementById('b1').style.display='block';
+}
+
+function quiz(){
+  document.getElementById('quiz').style.display='block';
+}
+
+function save(op){
+  escolhas.push(op);
+}
+
+function final(){
+  let msg="Independentemente das escolhas… preparei um momento que só faz sentido contigo 💖";
+  if(escolhas.includes('intenso')){
+    msg="Preparei algo intenso, envolvente e cheio de conexão 🔥";
+  }
+  if(escolhas.includes('romance')){
+    msg="Preparei um momento calmo, romântico e cheio de carinho 💞";
+  }
+  if(escolhas.includes('mistério')){
+    msg="Preparei algo misterioso… que se revela aos poucos 🌙";
+  }
+
+  document.getElementById('finalText').innerHTML = "💌 " + msg;
+  document.getElementById('final').style.display='block';
+}
+</script>
+
+</body>
+</html>
